@@ -69,7 +69,6 @@ canvas.addEventListener('mousemove', (event) => {
 //sunucudan mesaji dinliyor
 socket.on('data', (data) => {
     drawPoint(data.pastX, data.pastY, data.x, data.y, data.lineColor);
-    console.log(data);
 });
 
 socket.on('clear', (data) => {
