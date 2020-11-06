@@ -51,11 +51,15 @@ canvas.addEventListener('mouseup', () => {
     clicking = false;
 });
 
+canvas.addEventListener('mouseleave', () => {
+    clicking = false;
+});
+
 canvas.addEventListener('mousemove', (event) => {
     if (clicking === true) {
         const x = event.clientX - fedX;
         const y = event.clientY - fedY;
-
+        
         const data = {x, y, pastX, pastY, lineColor, lineWidth};
         drawPoint(pastX, pastY, x, y, lineColor);
         
